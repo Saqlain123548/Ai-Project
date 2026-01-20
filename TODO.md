@@ -1,47 +1,25 @@
-# Zehra AI - Chat Features Implementation
+# TODO: ChatGPT-like "New Chat" Experience Implementation
 
-## Phase 1: Dependencies & Setup
-- [x] Install required packages (react-markdown, syntax-highlighter, lucide-react, framer-motion, date-fns)
+## Phase 1: CSS Animations ✅
+- [x] Add transition animations to app/globals.css
 
-## Phase 2: API Enhancements
-- [x] Add streaming support to API route
-- [x] Implement conversation history storage
-- [x] Add response time tracking
+## Phase 2: New Chat Component ✅
+- [x] Create components/chat/new-chat.tsx with:
+  - [x] Centered input positioning
+  - [x] Dynamic starter messages above input
+  - [x] State management for transition (centered → bottom)
+  - [x] Smooth animations (200-300ms ease-in-out)
 
-## Phase 3: UI Components
-- [x] Create Sidebar component (conversations list, new chat, delete)
-- [x] Create Message component (markdown, syntax highlighting, copy button, timestamp)
-- [x] Create Input component (voice input, quick actions, send button)
-- [x] Create Header component (theme toggle, settings)
+## Phase 3: Update Main Page ✅
+- [x] Modify app/page.tsx to:
+  - [x] Detect new chat state (messages.length === 0)
+  - [x] Render NewChat component for new conversations
+  - [x] Track focus/typing to trigger transition
+  - [x] Keep existing behavior for ongoing chats
 
-## Phase 4: Main Page Integration
-- [x] Implement full chat UI with sidebar
-- [x] Add theme toggle (light/dark mode)
-- [x] Add text-to-speech functionality
-- [x] Add character/word count stats
-
-## Phase 5: Styling & Polish
-- [x] Update globals.css with new styles
-- [x] Add animations with framer-motion
-- [x] Mobile responsive design
-
-## Phase 6: Testing
-- [ ] Test all features
-- [ ] Fix any bugs
-
-## ✅ Features Implemented:
-- ✅ Markdown support with code syntax highlighting
-- ✅ Copy to clipboard button
-- ✅ Message timestamps
-- ✅ Quick action buttons (Write code, Explain, Summarize, Chat)
-- ✅ Conversation sidebar with multiple chats
-- ✅ Dark/Light theme toggle
-- ✅ Text-to-speech (read responses aloud)
-- ✅ Voice input (speech-to-text)
-- ✅ Response time display (ms)
-- ✅ Character/Word count stats
-- ✅ Export chat to text file
-- ✅ Smooth animations with framer-motion
-- ✅ Conversation history persistence (in-memory)
-- ✅ Modern gradient UI design
+## Phase 4: Testing
+- [ ] Test new chat state (centered input with starter messages)
+- [ ] Test transition animation on focus/typing
+- [ ] Test existing chat behavior (unchanged)
+- [ ] Verify responsive design
 
